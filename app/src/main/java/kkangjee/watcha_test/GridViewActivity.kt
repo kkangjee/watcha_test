@@ -62,7 +62,7 @@ class GridViewActivity : AppCompatActivity(R.layout.activity_grid_view) {
                     "media selected: ${media.id}",
                     Toast.LENGTH_SHORT
                 ).show()
-                Favorite.addItem(media.id!!)
+                Favorite.addItem(media.id)
             }
         }
         gifsGridView.searchCallback = object : GPHSearchGridCallback {
