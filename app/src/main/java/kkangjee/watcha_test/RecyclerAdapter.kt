@@ -24,6 +24,7 @@ class RecyclerAdapter(private val items: ArrayList<String>) :
             items.removeAt(position)
             notifyDataSetChanged()
             Favorite.setList(items)
+            
             Toast.makeText(it.context, "삭제되었습니다", Toast.LENGTH_SHORT).show()
         }
         holder.apply {

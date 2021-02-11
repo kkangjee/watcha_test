@@ -1,22 +1,16 @@
 package kkangjee.watcha_test
 
 import android.app.Activity
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
-import com.giphy.sdk.analytics.GiphyPingbacks
 import com.giphy.sdk.core.models.Media
 import com.giphy.sdk.core.models.enums.MediaType
-import com.giphy.sdk.ui.GPHContentType
-import com.giphy.sdk.ui.GiphyLoadingProvider
 import com.giphy.sdk.ui.pagination.GPHContent
 import com.giphy.sdk.ui.views.*
 import kotlinx.android.synthetic.main.activity_grid_view.*
@@ -48,9 +42,6 @@ class GridViewActivity : AppCompatActivity(R.layout.activity_grid_view) {
 
         }
 
-
-
-
         gifsGridView.callback = object : GPHGridCallback {
             override fun contentDidUpdate(resultCount: Int) {
                 Timber.d("contentDidUpdate $resultCount")
@@ -59,12 +50,13 @@ class GridViewActivity : AppCompatActivity(R.layout.activity_grid_view) {
                 Timber.d("didSelectMedia ${media.id}")
                 Toast.makeText(
                     this@GridViewActivity,
-                    "media selected: ${media.id}",
+                    "favorite에 추가되었습니다",
                     Toast.LENGTH_SHORT
                 ).show()
                 Favorite.addItem(media.id)
             }
         }
+
         gifsGridView.searchCallback = object : GPHSearchGridCallback {
             override fun didTapUsername(username: String) {
                 Timber.d("didTapUsername $username")

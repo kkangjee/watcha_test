@@ -1,7 +1,5 @@
 package kkangjee.watcha_test
 
-import android.widget.Button
-import com.giphy.sdk.analytics.GiphyPingbacks.context
 import com.giphy.sdk.core.models.enums.MediaType
 import com.giphy.sdk.ui.GPHContentType
 import com.giphy.sdk.ui.views.GiphyGridView
