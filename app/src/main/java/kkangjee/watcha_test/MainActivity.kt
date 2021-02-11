@@ -71,8 +71,6 @@ class MainActivity : AppCompatActivity() , GiphyDialogFragment.GifSelectionListe
         selectedContentType: GPHContentType
     ) {
         //Your user tapped a GIF
-        //gif 선택 시 id 가져오기
-        Log.e("main_onGifSelected", media.id)
     }
     private fun setupTimber() {
         Timber.plant(Timber.DebugTree())
