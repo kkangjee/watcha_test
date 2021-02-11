@@ -19,7 +19,6 @@ import timber.log.Timber
 
 class MainActivity : AppCompatActivity() , GiphyDialogFragment.GifSelectionListener{
     private val YOUR_API_KEY = "BJqVVqyooC5k6JK8kQruMEHs9c2DKKHj"
-    var favoriteList = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

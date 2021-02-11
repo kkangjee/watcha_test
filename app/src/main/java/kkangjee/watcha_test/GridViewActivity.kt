@@ -84,9 +84,6 @@ class GridViewActivity : AppCompatActivity(R.layout.activity_grid_view) {
             performCustomSearch()
         }
 
-
-        gifsGridView.setGiphyLoadingProvider(loadingProviderClient)
-
         searchInput.setOnEditorActionListener { view, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_NULL || actionId == EditorInfo.IME_ACTION_GO) {
                 dismissKeyboard()
@@ -121,20 +118,7 @@ class GridViewActivity : AppCompatActivity(R.layout.activity_grid_view) {
     }
 
     private fun setTrendingQuery() {
-        gifsGridView.content = when (DemoConfig.contentType) {
-            GPHContentType.gif -> GPHContent.trendingGifs
-            GPHContentType.sticker -> GPHContent.trendingStickers
-            GPHContentType.text -> GPHContent.trendingText
-            GPHContentType.emoji -> GPHContent.emoji
-            GPHContentType.recents -> GPHContent.recents
-            else -> throw Exception("MediaType ${DemoConfig.mediaType} not supported ")
-        }
+        gifsGridView.content = GPHContent.trendingGifs
     }
 
-    private val loadingProviderClient = object : GiphyLoadingProvider {
-        override fun getLoadingDrawable(position: Int): Drawable {
-
-            return LoadingDrawable(if (position % 2 == 0) LoadingDrawable.Shape.Rect else LoadingDrawable.Shape.Circle)
-        }
-    }
 }
