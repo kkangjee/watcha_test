@@ -38,7 +38,7 @@ class RecyclerAdapter(private val items: ArrayList<String>) :
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         private var view: View = v
         fun bind(listener: View.OnClickListener, item: String) {
-            Glide.with(context).load(item).into(view.iv_listitem)
+            Glide.with(context).load(item).fitCenter().into(view.iv_listitem)
             view.setOnClickListener(listener)
 
         }

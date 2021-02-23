@@ -1,7 +1,7 @@
 package kkangjee.watcha_test
 
 import android.content.Context
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import com.giphy.sdk.analytics.GiphyPingbacks.context
 import org.json.JSONArray
 

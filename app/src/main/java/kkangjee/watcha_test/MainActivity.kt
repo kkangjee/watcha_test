@@ -13,7 +13,7 @@ import timber.log.Timber
 
 
 class MainActivity : AppCompatActivity(), GiphyDialogFragment.GifSelectionListener {
-    private val YOUR_API_KEY = "BJqVVqyooC5k6JK8kQruMEHs9c2DKKHj"
+    private val YOUR_API_KEY = "dc6zaTOxFJmzC"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
